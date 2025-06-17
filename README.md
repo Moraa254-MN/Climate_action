@@ -1,6 +1,7 @@
+
 #  AI for Climate Action: Forecasting Carbon Emissions
 
-This project uses "machine learning" to forecast "CO₂ emissions" by country, supporting **UN SDG 13 – Climate Action**. The goal is to help governments and environmental organizations make informed decisions using data.
+This project uses **machine learning** to forecast **CO₂ emissions** by country, supporting **UN SDG 13 – Climate Action**. The goal is to help governments and environmental organizations make informed decisions using data.
 
 
 ##  Project Overview
@@ -14,21 +15,22 @@ This project uses "machine learning" to forecast "CO₂ emissions" by country, s
 ##  Tools & Technologies
 
 - Python  
-- Jupyter Notebook  
+- Jupyter Notebook / Script  
 - Pandas, NumPy  
 - Scikit-learn  
-- Matplotlib & Seaborn for visualizations  
-- Dataset: [World Bank CO₂ Emissions](https://data.worldbank.org/indicator/EN.ATM.CO2E.KT) + [Kaggle CO2 Dataset](https://www.kaggle.com/datasets/yoannboyere/co2-ghg-emissionsdata)
+- Matplotlib for visualizations  
+
+Dataset: Synthetic demo dataset (real data can be used from [World Bank CO₂ Emissions](https://data.worldbank.org/indicator/EN.ATM.CO2E.KT) or [Kaggle CO2 Dataset](https://www.kaggle.com/datasets/yoannboyere/co2-ghg-emissionsdata))
 
 
 
-## Model & Approach
+##  Model & Approach
 
 - **Model Used**: Linear Regression & Random Forest Regressor  
 - **Target Variable**: CO₂ Emissions (kt)  
-- **Features**: GDP, population, energy use, industrial activity
+- **Features**: GDP, Population, Energy Use, Industrial Output
 
-Steps:
+### Steps:
 1. Data cleaning and preprocessing
 2. Feature selection
 3. Model training and testing
@@ -39,21 +41,18 @@ Steps:
 
 ##  Results
 
-<p align="center">
-  <img src="screenshots/prediction_plot.png" width="600"/>
-  <br>
-  <em>Predicted vs Actual CO₂ emissions (sample countries)</em>
-</p>
+![Prediction Plot](prediction_plot.png)
 
-- R² Score: `0.87` (example)
-- MAE: `45,000 kt` (example)
+- R² Score: ~0.60 (Linear Regression)
+- MAE: ~7868.00 (Linear Regression)
+
 
 
 ##  Ethical Reflection
 
-- **Bias:** Some countries have incomplete or outdated reporting, which may impact accuracy.
-- **Fairness:** We aim for an inclusive model that considers countries of all income levels.
-- **Sustainability:** A data-driven approach supports better environmental policy and awareness.
+- **Bias**: Some countries may lack complete data, affecting prediction accuracy.
+- **Fairness**: The goal is a fair model that serves all regions regardless of size or income.
+- **Sustainability**: Aims to inform proactive climate action via predictive modeling.
 
 
 
@@ -61,17 +60,26 @@ Steps:
 
 | File Name              | Description                                  |
 |------------------------|----------------------------------------------|
-| `ClimateForecast.ipynb`| Jupyter Notebook with full ML pipeline       |
-| `climate_model.py`     | Python script version of the notebook        |
-| `README.md`            | Project overview                             |
-| `screenshots/`         | Folder with result screenshots               |
+| `climate_model.py`     | Python script with ML pipeline               |
+| `prediction_plot.png`  | Result visualization image                   |
+| `README.md`            | Project overview and instructions            |
 
 
 
 ##  How to Run
 
 ```bash
+# Clone the repository
 git clone https://github.com/yourusername/climate-co2-forecast.git
 cd climate-co2-forecast
-pip install -r requirements.txt
-jupyter notebook ClimateForecast.ipynb
+
+# Run the script
+python climate_model.py
+```
+
+
+
+##  Contact
+
+For questions or collaboration, feel free to connect!
+email:mercynyabuto24@gmail.com
